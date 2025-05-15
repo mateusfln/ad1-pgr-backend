@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% block title %}doc.it{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="{% url 'register' %}">Cadastre-se</a>
+        <a href="{% url 'login' %}">Login</a>
+    </nav>
+
+    <header>
+        <h1 class="h1">Bem-vindo ao doc.it</h1>
+        <p>A sua plataforma para gerenciamento de documentos.</p>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% block scripts %}
+    <script src="{% static 'js/main.js' %}"></script>
+    {% endblock %}
+
+</body>
+</html>
