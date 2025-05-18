@@ -26,6 +26,7 @@ def register(request):
             return redirect('login')
 
     return render(request, 'register.html')
+    return redirect('login')
 
 def login(request):
     return render(request, 'login.html')
