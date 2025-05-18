@@ -5,16 +5,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>{% block title %}doc.it{% endblock %}</title>
-    
-    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
 
     <nav class="navbar">
+        <a href="{% url 'home' %}">Início</a>
         <a href="{% url 'register' %}">Cadastre-se</a>
         <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'funcionalidades' %}">Funcionalidades</a>
+        <a href="{% url 'perguntasfrequentes' %}">Perguntas Frequentes</a>
     </nav>
 
     <header>
