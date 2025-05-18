@@ -11,5 +11,5 @@ def register(request):
 def login(request):
     return render(request, 'login.html')
 
-def perguntasgrenquentes(request):
+def perguntasfrenquentes(request):
     return render(request, 'perguntasfrequentes.html', context={})
