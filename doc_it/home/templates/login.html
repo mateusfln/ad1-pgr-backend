@@ -6,6 +6,17 @@
 <section class="login-section">
     <div class="container">
         <h2 class="section-title">Login</h2>
+
+        {% if messages %}
+          <div class="messages">
+            {% for message in messages %}
+              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
         <form action="{% url 'login' %}" method="POST" class="login-form">
             {% csrf_token %}
             <div class="form-group mb-3">
