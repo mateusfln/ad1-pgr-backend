@@ -5,10 +5,44 @@
 {% endblock %}
 
 {% block content %}
-<section>
+<style>
+    .funcionalidades-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .funcionalidades-container h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #0047ab;
+    }
+
+    .funcionalidades-container ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .funcionalidades-container li {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        border-bottom: 1px solid #eee;
+        font-size: 1.1rem;
+    }
+
+    .funcionalidades-container li:last-child {
+        border-bottom: none;
+    }
+</style>
+
+<section class="funcionalidades-container">
     <h2>Funcionalidades</h2>
     <ul>
-        <li>Cadastro de usuários</li>
+        <li><a href="{% url 'register' %}">Cadastro de usuários</a></li>
         <li>Upload e organização de documentos</li>
         <li>Controle de permissões</li>
         <li>Histórico de alterações</li>
