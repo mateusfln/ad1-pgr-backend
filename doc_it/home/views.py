@@ -54,6 +54,8 @@ def perguntasfrequentes(request):
 def funcionalidades(request):
     return render(request, 'funcionalidades.html')
 
+
+
 class UserProfileViewSet(viewsets.ModelViewSet):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
